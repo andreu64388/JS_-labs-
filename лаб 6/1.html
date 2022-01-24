@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <html>
+   <head>
+    <meta charset="utf-8">
+      <title>6 лаба</title>
+ <style type="text/css">
+table, td,tr{
+    border: 3px solid black;
+  }
+table{
+    width:200px;
+    height: 300px;
+    font-size: 10px;
+    margin: 30px 0px;
+    text-align: center;
+  }
+</style>
+</head>
+ <body>
+ <input type="button" value="Открыть окно" id="btn1_open">
+ <input type="button" value="Закрыть окно" id="btn2_close">
+ <input type="button" value="Напечатать имени окна "  id="btn3_print">
+ <input type="button" value=" Напечатать текст" id="btn4_randomText">
+ </body>
+ <script type="text/javascript">
+  document.getElementById("btn1_open").onclick=()=>
+ {
+  newWin = window.open("", "window", "width=200,height=200");
+ }
+  document.getElementById("btn2_close").onclick=()=>
+   {
+    newWin.close();
+   }
+     document.getElementById("btn3_print").onclick=()=>
+       {
+         newWin.document.write(newWin.name);
+       }
+        document.getElementById("btn4_randomText").onclick=()=> 
+          {
+            newWin.document.write(" Раз два три четыре пять ");
+          } 
+  document.write("<table ><tr><th>Свойство</th><th>Значение</th>");
+  document.write("<tr><td>Информация о браузере</td><td>"+navigator.userAgent+"</td>");
+  document.write("<tr><td>Версию браузера</td><td>"+navigator.appVersion+"</td>");
+  document.write("<tr><td>Название браузера;</td><td>"+navigator.appName+"</td>");
+  document.write("<tr><td> Кодовое название браузера</td><td>"+navigator.appCodeName+"</td>");
+  document.write("<tr><td>ОС, которую использует пользователь</td><td>"+navigator.platform+"</td>");
+  document.write("<tr><td>Включена ли поддержка Java в браузере</td><td>"+navigator.javaEnabled()+"</td>");
+  document.write("<tr><td>Ширину и высоту экрана</td><td>"+screen.height +" "+ screen.width+"</td>");
+  document.write("<tr><td>Глубину цвета</td><td>"+screen.colorDepth+"</td>");
+  document.write("<tr><td>URL, которые были посещены в данном окне браузера</td><td>"+history.length+"</td>");
+  document.write("<tr><td> URL текущего документа</td><td>"+location.href+"</td>");
+  document.write("<tr><td> Путь к загруженному документу;</td><td>"+location.pathname+"</td>");
+  document.write("<tr><td> Имя домена загруженного документа</td><td>"+location.hostname+"</td></table");
+</script>
+</html>
