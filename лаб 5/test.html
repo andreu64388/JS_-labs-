@@ -1,0 +1,159 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    	<meta charset="utf-8">
+    	<title>лаба1</title>
+    	<style type="text/css">
+    p{
+        color:blue;
+        font-family: Arrial;
+        font-size: 16pt;
+    }
+    body{
+    	background: #F5DEB3;
+
+    }
+    h2{
+    color:800080;
+    text-align: center;
+    font-family: Monotype Corsiva;
+    }
+
+    td
+    {
+    	height: 30px;
+    }
+    .elent1{
+        color: red;
+        font-family:Times New Roman;
+        font-size: 18pt;
+    }
+    .elent2{
+        color: yellow;
+        font-family:Times New Roman;
+        font-size: 20pt;
+    }
+    .elent3{
+        color: green;
+        font-family:Times New Roman;
+        font-size:25pt;
+    }
+    .class1{
+        margin: 0px 420px;
+    }
+    input:hover{
+    background: red;
+    color: white;
+    }
+    	</style>
+    </head>
+    <body>
+    <h1 class="first">Позаботься о своем здоровье!</h1>
+    <h2>Вред курения</h2>
+    <p >О вреде курения сказано немало. Однако беспокойство ученых и врачей, вызванное распространением этой пагубной привычки, растет, так как пока еще значительное число <span  style="color:red" id="first">людей</span> не считает курение вредным для здоровья.</p>
+
+    <h2>Вред курения 1.1</h2>
+    <p >У курильщиков центры мозга, чувствительные к никотину, находятся в угнетённом состоянии, а потому и на концах нервов, берущих начало из них, веществ, необходимых для нормального строения и функции тканей, образуется недостаточно. В результате курения во многих тканях и органах наблюдается<span style="color:red"> нервная</span> дистрофия, а на фоне неё складывается предрасположенность к различным заболеваниям.</p>
+
+    <h2>Вред курения 1.2</h2>
+    <p >Никотин – яд нервной системы, избирательно действующий на нервные узлы центральной и периферической нервной системы, регулирующие деятельность внутренних <span>органов</span> и жизненно важных систем. В малых дозах никотин действует возбуждающе на нервную систему, в больших - вызывает ее паралич (остановку дыхания, прекращение сердечной деятельности).</p>
+    <h2>Списки</h2>
+    <ol>
+       <li class="elent1">	Элемент 1
+
+        <ul type="disc">
+         <li >Элемент 1.1</li>
+         <li>Элемент 1.2</li>
+        </ul>
+       </li>
+       <li class="elent2">Элемент 2
+
+        <ul type="disc">
+         <li>Элемент 2.1</li>
+         <li>Элемент 2.2  </li>
+          <li>Элемент 2.3 </li>
+        </ul>
+       </li>
+       <li class="elent3">	Элемент 3
+
+        <ul type="disc">
+         <li>Элемент 3.1</li>
+         <li>Элемент 3.2</li>
+        </ul>
+       </li>
+      </ol>
+    <table   width="80%" border="1" align="center" cellspacing="0" id="table">
+    <tr text-align="center" >
+        <th >Предметы</th>
+        <th>Оценки</th>
+    </tr>
+    <tr>
+        <td>Математика</td>
+        <td id="second" class="sr_bl">8</td>
+    </tr>
+    <tr>
+        <td>Физика</td>
+        <td class="sr_bl">9</td>
+    </tr>
+    <tr>
+        <td>Английский язык</td>
+        <td class="sr_bl">8</td>
+    </tr>
+    <tr>
+        <td>История</td>
+        <td class="sr_bl"> 10</td>
+    </tr>
+    <tr>
+        <td>География</td>
+        <td class="sr_bl">9</td>
+    </tr>
+    </table>
+    <div class="class1">
+        <input type="button" name="" onclick="fun1()" value="1 задание">
+        <input type="button" name="" onclick="fun2()" value="2 задание"> 
+        <input type="button" name="" onclick="fun3()" value="3 задание"> 
+        <input type="button" name="" onclick="fun4()" value="4 задание"> 
+    </div> 
+
+         <script type="text/javascript"> 
+            function fun1()
+              {
+                 for (let i = 0; i < document.all.length; i++)
+                 {
+                 alert("Тэг номер " + (i + 1) + ": " + document.all[i].tagName);    
+                 }
+              }
+
+           function fun2()
+            {
+            for(let i = 0; i < document.body.childNodes.length; i++)
+             {
+              alert(document.body.childNodes[i]);
+             }
+            }
+            function fun3()
+            {
+            for(let i = 0; i < document.all.length; i++)
+          {
+             if(document.all[i].tagName === "SPAN")
+              { 
+          alert(document.all[i].innerText);
+          break;
+              }      
+            }
+         alert(document.querySelector("span").innerHTML);
+         alert(document.getElementById("first").innerHTML);
+          }
+        function fun4()
+        {
+        let avr = 0;
+        for (let i = 0; i < 5; i++ ) 
+         {
+        let el = Number(document.getElementsByClassName("sr_bl")[i].innerText);
+        avr += el;
+         }
+        alert(document.getElementsByTagName('span')[1].innerHTML +=" Средний балл: "+ (avr/5));
+        }
+     </script>		
+    </body>
+    </html>
