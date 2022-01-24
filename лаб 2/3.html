@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+	   <meta charset="utf-8">
+	     <title> Третье задание </title>
+        <style type="text/css">
+td{
+border: 2px solid black;
+text-align: center;
+}
+table{
+margin-left: 45%;
+}
+</style> 
+<script type="text/javascript"> 
+let a,b,PI;
+a=Number(prompt("Введите с какого радиуса "));
+b=Number(prompt("Введите до какого радиуса "));
+PI=Math.PI;
+document.write("<table> <tr><td>Радиус</td> <td>Площадь</td> <td>Длина</td>");
+do {
+    let s = Math.floor(a*a*PI);
+    let l = Math.floor(2*PI*a);
+    let a1 =a.toFixed(1);//Фиксирует значчение после запятой и окгругляет
+   document.write("<tr><td>"+a1+"</td><td>"+s+"</td> <td>"+l+"</td></tr>");
+   a=a+0.3;
+}
+  while(a<=b);
+  document.write("</table>");
+	</script>
+</head>
+<body>
+</body>
+</html>

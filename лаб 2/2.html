@@ -1,0 +1,30 @@
+	<!DOCTYPE html>
+	   <html>
+	      <head>
+		    <meta charset="utf-8">
+		      <title>Второе задание</title>
+	<style type="text/css">
+	td{
+	border: 2px solid black;
+	font-size: 	30px;
+	text-align: center;
+	}
+	</style>
+	<script type="text/javascript">
+		var a,b;
+		a=Number(prompt("Число столбцов"));
+		b=Number(prompt("Число столбиков"));
+		document.write("<table>")
+		 for (var i = 1; i<=a; i++) {
+	   document.write("<tr>");
+	  for (var j = 1; j<=b;  j++) {
+		document.write("<td>"+i*j+"</td>");
+	}
+	document.write("</tr>");
+	} 
+	document.write("</table>");
+	</script>
+	</head>
+	<body>
+	</body>
+	</html>
