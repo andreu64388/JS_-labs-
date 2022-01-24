@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+  <html>
+     <head>
+       <meta charset="utf-8">
+         <title>2 задание</title>
+            <script type="text/javascript">
+            let array = ["pow", "pop", "push", "shift", "round", "floor", "slice", "sort"];
+            let array_1 = [];
+            let math_array = [];
+            array_1 = array.slice(1,4).concat(array.slice(6,8));
+            math_array = array.slice(0,1).concat(array.slice(4,6));
+            array_1.push("concat"); // этот метод добовляет в 
+            math_array.unshift("sqrt");
+            document.write(array +"-- длинна массива: "+ array.length + "<br>");
+            document.write(array_1 + "-- длинна массива: " + array_1.length + "<br>");
+            document.write(math_array + "-- длинна массива: "+  math_array.length ); 
+       </script>
+      </head>
+    <body>      
+   </body>
+</html>           
