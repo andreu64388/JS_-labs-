@@ -1,0 +1,721 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.submenu {
+  position: absolute;
+  width: 190px;
+  background: #17696a;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
+}
+.submenu li {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+}
+.submenu li > a {
+  color: white;
+}
+.submenu > li:hover {
+  width: 100%;
+  background-color: black;
+  color: black !important;
+}
+
+.topmenu > li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-33%, 0);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+header .container {
+  padding: 30px 0;
+}
+header .osnova {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+header .osnova .register {
+  position: absolute;
+  right: 0;
+}
+header .osnova .register .input-name {
+  padding: 5px 20px;
+  border: 1px solid grey;
+}
+header .osnova .register button {
+  cursor: pointer;
+  padding: 6px;
+  color: white;
+  background: #17696a;
+  border: none;
+}
+header .osnova .register a {
+  margin-left: 70px;
+  background: #17696a;
+  padding: 5px 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+}
+header .logo .logo_img {
+  display: block;
+}
+header .logo h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+header nav {
+  margin-left: 80px;
+}
+header nav ul > li {
+  display: inline-block;
+  margin-right: 30px;
+  position: relative;
+  font-size: 15px;
+  color: #424551;
+}
+header nav ul > li a {
+  transition: 0.2s;
+}
+header nav ul > li a:hover {
+  color: red;
+}
+header nav ul > li a .hide {
+  display: none;
+}
+header nav ul > li a .hide li {
+  display: block;
+}
+header nav ul > li a .burger {
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 5px 10px;
+  color: white;
+  background: #17696a;
+}
+
+main .container {
+  position: relative;
+}
+main img {
+  width: 100%;
+  height: 30%;
+}
+main .block {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+}
+main p {
+  font-size: 28px;
+}
+main h1 {
+  margin: 10px 0 30px 0;
+  font-size: 50px;
+}
+main .btn {
+  margin: 20px 120px;
+  cursor: pointer;
+  background: #17696a;
+  padding: 10px 20px;
+  font-weight: 700;
+  color: white;
+  border: none;
+}
+
+.osnovabtn {
+  position: relative;
+}
+.osnovabtn span {
+  position: absolute;
+  top: 30%;
+  background: black;
+  color: white;
+  font-size: 60px;
+  left: 0%;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 1;
+}
+.osnovabtn .slide:nth-child(2) {
+  left: 96%;
+}
+.osnovabtn span:active {
+  position: absolute;
+  color: red;
+}
+
+.slider {
+  width: 83%;
+  position: relative;
+  height: 400px;
+  margin: 20px auto;
+  overflow: hidden;
+  justify-content: left;
+}
+.slider section {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: left;
+  margin: 0 auto;
+}
+.slider section .div {
+  min-width: 330px;
+  height: 270px;
+  position: relative;
+  left: 0%;
+  color: white;
+  text-align: center;
+  margin: 10px 0 0 0;
+  margin-right: 2px;
+  transition: 0.9s;
+}
+.slider section .div img {
+  min-width: 310px;
+  height: 280px;
+  display: block;
+  cursor: pointer;
+}
+
+.h2_tab {
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tab_div {
+  border: 40px solid red;
+  background-color: red;
+}
+
+.sections nav {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: center;
+}
+.sections nav .uls {
+  padding: 20px;
+  background: #4d4d4d;
+}
+.sections nav .uls li:nth-child(1) {
+  background-color: black;
+}
+.sections .blocks {
+  max-width: 858px;
+  background-color: white;
+  height: 1100px;
+  margin: 0px auto;
+}
+.sections .blocks .all1 {
+  border: 2px solid #17696a;
+  height: 340px;
+  margin: 10px 20px;
+  min-width: 220px;
+  float: left;
+}
+.sections .blocks .all1 p {
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.sections .blocks .all1 a {
+  background: #17696a;
+  text-align: center;
+  display: inline;
+  padding: 5px 40px;
+  color: white;
+  margin: 0 25%;
+}
+.sections .blocks .all1 img {
+  width: 240px;
+  height: 250px;
+}
+.sections .active1 {
+  background-color: black;
+}
+.sections nav ul li {
+  display: inline-block;
+  margin: 0 auto;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  background: #17696a;
+}
+.sections .tabs {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+.sections .tabs .btn {
+  padding: 10px 20px;
+  border: none;
+  background: #17696a;
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.sections .tabs .btn.active {
+  background-color: black;
+}
+.sections .tabs_content {
+  width: 100%;
+  /*   height: 1280px; */
+}
+
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
+
+.scroll {
+  border-radius: 50%;
+  background: #17696a;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 5px;
+  bottom: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  display: none;
+  z-index: 4;
+}
+
+.footer {
+  background-color: #1e212c;
+}
+.footer .wrapper {
+  padding: 50px 0;
+}
+.footer ul {
+  display: block;
+}
+.footer li {
+  margin: 10px 0;
+  color: gray;
+  cursor: pointer;
+}
+.footer .li_one {
+  color: white;
+  font-size: 20px;
+}
+
+.uk_navs {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.uk_navs .fa {
+  font-size: 28px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.uk_navs .fa:hover {
+  opacity: 0.7;
+}
+.uk_navs > li {
+  color: gray;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  text-align: center;
+}
+.flex img {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+#login {
+  cursor: pointer;
+}
+
+.fixed {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+.fixed form {
+  box-shadow: 0 4px 16px #ccc;
+  background-color: white;
+  max-width: 330px;
+  height: 300px;
+  overflow: hidden;
+  margin: 60px 0;
+  font-family: sans-serif;
+  padding: 10px;
+  margin: 20px auto;
+}
+.fixed #text1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 4px;
+}
+.fixed label {
+  display: inline-block;
+  padding: 0px 70px;
+  text-align: center;
+}
+.fixed input {
+  margin: 0px 45px;
+  width: 70%;
+  font-size: 17px;
+}
+.fixed .buttons {
+  border: none;
+  background-color: #17696a;
+  padding: 10px 20px;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 85px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.mess {
+  background-color: green;
+  color: white;
+  font-size: 15px;
+}
+
+.imgs_container {
+  background: #fbe3d7;
+  height: 490px;
+  margin: 0 auto;
+}
+
+.hide-buton {
+  font-size: 30px;
+  background-color: #17696a;
+  color: white;
+  padding: 2px 15px;
+  display: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.hide-block {
+  display: none;
+}
+.hide-block ul li {
+  display: inline-block;
+  margin-left: 0px;
+  cursor: pointer;
+}
+
+@media (max-width: 1180px) {
+  footer {
+    display: none;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .wrapper {
+    margin: auto;
+    max-width: 900px;
+  }
+  .wrapper .topmenu {
+    display: none;
+  }
+  .wrapper .osnova {
+    position: relative;
+  }
+  .wrapper .hide-buton {
+    display: block;
+    position: absolute;
+    right: 150px;
+    z-index: 2;
+    top: -5px;
+  }
+  .wrapper .input-name {
+    display: none;
+  }
+  .wrapper .fa.fa-search {
+    display: none;
+  }
+  .wrapper .fa.fa-search .hidden {
+    display: none;
+  }
+
+  .blocks {
+    width: 100%;
+    background-color: white;
+    margin: 0px auto;
+  }
+  .blocks .all1 {
+    border: 2px solid #17696a;
+    height: 260px;
+    z-index: 5;
+    margin: 10px 20px;
+    width: 260px;
+    float: left;
+  }
+  .blocks .all1 p {
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .blocks .all1 a {
+    background: #17696a;
+    text-align: center;
+    display: inline;
+    padding: 5px 40px;
+    color: white;
+    margin: 0 25%;
+  }
+  .blocks .all1 img {
+    width: 100px;
+    height: 190px;
+  }
+}
+@media (max-width: 1180px) and (max-width: 780px) {
+  .closebtn {
+    position: absolute;
+    right: 30px;
+    color: white;
+  }
+
+  #login {
+    display: none;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .wrapper {
+    max-width: 600px;
+  }
+  .wrapper .topmenu {
+    display: none;
+  }
+  .wrapper .osnova {
+    position: relative;
+  }
+  .wrapper .hide-buton {
+    display: block;
+    position: absolute;
+    right: 0px;
+    z-index: 2;
+    top: -5px;
+  }
+  .wrapper .hide-block li {
+    margin-right: 25px;
+  }
+  .wrapper .input-name {
+    display: none;
+  }
+  .wrapper .fa.fa-search {
+    display: none;
+  }
+  .wrapper #login1 {
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #17696a;
+  }
+
+  .blocks {
+    width: 100%;
+    background-color: white;
+    margin: 0px auto;
+  }
+  .blocks .all1 {
+    border: 2px solid #17696a;
+    height: 260px;
+    z-index: 5;
+    margin: 10px 20px;
+    width: 200px;
+    float: left;
+  }
+  .blocks .all1 p {
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .blocks .all1 a {
+    background: #17696a;
+    text-align: center;
+    display: inline;
+    padding: 5px 40px;
+    color: white;
+    margin: 0 25%;
+  }
+  .blocks img {
+    width: 100px;
+    height: 190px;
+  }
+
+  .message {
+    position: absolute;
+    top: -20px;
+    left: 45%;
+  }
+}
+@media (max-width: 1180px) and (max-width: 780px) and (max-width: 380px) {
+  .png {
+    width: 300px;
+    height: 200px;
+  }
+
+  .block .btn {
+    display: none;
+  }
+
+  #login {
+    display: none;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .container {
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  .wrapper .topmenu {
+    display: none;
+  }
+  .wrapper .osnova {
+    position: relative;
+  }
+  .wrapper .hide-buton {
+    display: block;
+    position: absolute;
+    right: 0px;
+    z-index: 2;
+    top: -5px;
+  }
+  .wrapper .hide-block li {
+    display: none;
+  }
+  .wrapper .hide-block li a {
+    margin: 0px 20px;
+  }
+  .wrapper .input-name {
+    display: none;
+  }
+  .wrapper .fa.fa-search {
+    display: none;
+  }
+  .wrapper #login1 {
+    color: white;
+    padding: 1px 2px;
+    cursor: pointer;
+    background-color: #17696a;
+  }
+
+  .logo-text {
+    font-size: 12px;
+  }
+
+  .closebtn {
+    color: black;
+  }
+
+  .blocks {
+    width: 100%;
+    background-color: black;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .blocks .all1 {
+    border: 2px solid #17696a;
+    height: 280px;
+    z-index: 5;
+    overflow: hidden;
+    margin: 10px 0px;
+    margin-left: 40px;
+    width: 23px;
+  }
+  .blocks .all1 p {
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .blocks .all1 a {
+    background: #17696a;
+    text-align: center;
+    display: inline;
+    padding: 5px 40px;
+    color: white;
+    margin: 0 25%;
+  }
+}
+.basket_block {
+  background-color: red;
+  width: 80%;
+  margin: 20px auto;
+  height: 0%;
+}/*# sourceMappingURL=kursovoi.css.map */
