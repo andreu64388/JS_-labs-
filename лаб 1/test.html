@@ -1,0 +1,127 @@
+<!DOCTYPE html> 
+ <html>
+  <head>
+    <meta charset="utf-8">
+	 <title> Первое задание </title>
+<script type='text/javascript'>
+function fun1() {
+    alert("Вас приветствует учебный центр");
+var x, a ; /* переменные */ 
+x = prompt("Введите имя");
+alert("Добро пожаловать на наши курсы,"  +  x );
+a=confirm ("Хотите стать Web-дизайнером?");
+if(a){
+	alert("Учите стили CSS и JavaScript");
+}
+else{
+	alert("Упускаете время!");
+}}
+function fun2(){
+alert("Введите два числа");
+var a, b, c;
+alert("Введите 2 числа и получите сумму");
+a = Number(prompt());
+b  =Number( prompt());
+c = a + b;
+alert(c);
+}
+function fun3() {
+ alert("Сложение строк");
+var a, b, c;
+a = prompt();
+b  = prompt();
+c = a + b;
+alert(c);        
+}
+function fun4() {
+  var a;
+alert("Введите любое число и узнайте или оно находитья в промежутке");
+a= prompt();
+if(a>20 && a<40 && a!=15  ){
+  alert("Правильное значение");  
+}
+else {
+    alert(" Не правильное значение ");
+}
+}
+function fun5() {
+  var a;
+var b;
+alert("Введтите 2 числа и вы узнаете какое из них больше или равно")
+a = prompt("A");
+b = prompt("Б");
+if (a===b){
+  document.write("A и Б равны");  
+}
+else if(a>b) {
+    document.write("А больше Б");
+}
+
+ else  {
+    document.write("Б больше А");
+}
+}
+function fun6() {
+var a;
+var b;
+alert("Введите два числа");
+a = prompt();
+b = prompt();
+if(a==b){
+    document.write("Введите разные числа:(");
+}
+else{
+    document.write("ОООО,хоть разные числа");
+}
+}
+function fun7() {
+    var date = new Date();
+    var result = date.getDay()
+switch(result){
+    case 1:    alert("Понедельник "); break;
+    case 2:    alert("Вторник "); break;
+    case 3:    alert("Среда"); break;
+    case 4:    alert("Четверг"); break;
+    case 5:    alert("Пятница  "); break;
+    case 6:    alert("Суббота "); break;
+    case 7:    alert("Ввоскресенье "); break;
+}
+}
+function fun8() {
+  var a = (35*4-25*2)/5+232;
+var b = ( 8*4/2+5*2/4)*6; 
+document.write("Перввое число: " + a + "<br>");
+document.write("Второе число: "+ b +  "<br>");
+var c = a % b;
+document.write("Остаток: " + c);
+alert("Остаток: " + c);
+
+}
+</script>
+<style type="text/css">
+  
+input{
+  border-color: red;
+  border-radius: 6px;
+  font-size: 15px;
+}
+input:hover {
+  background-color: red;}
+  div{
+    margin-top: 40px;
+  }
+</style>
+   </head>
+ <body>
+  <div>
+  <input type="button" name="" onclick="fun1()" value="нажми на меня 1">
+   <input type="button" name="" onclick="fun2()" value="нажми на меня 2 ">
+    <input type="button" name="" onclick="fun3()" value="нажми на меня 3 ">
+    <input type="button" name="" onclick="fun4()" value="нажми на меня 4 ">
+    <input type="button" name="" onclick="fun5()" value="нажми на меня 5 ">
+    <input type="button" name="" onclick="fun6()" value="нажми на меня 6 ">
+    <input type="button" name="" onclick="fun7()" value="нажми на меня 7 ">
+    <input type="button" name="" onclick="fun8()" value="нажми на меня 8 ">
+</div>
+</body>
+</html> 
