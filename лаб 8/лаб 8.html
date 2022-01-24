@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>8 лаба</title>
+</head>
+<body>
+	<p id="span1">Первое задание</p>
+	<h5 id="span2">Привет</h5>
+	<img src="photo1.jpg" height="240px" width="240px" id="photo">
+	<p id="inner"> Нажми на меня</p>
+	<img src="photo1.jpg" height="100px" width="240px" id="photo" onmouseover="bigImg(this)" onmouseout="littImg(this)">
+	<p id="border1">Шестое задание</p>
+</body>
+<script type="text/javascript">
+	"use strict";
+	let span1 = document.getElementById("span1");
+	span1.onmouseover = () => {
+		span1.style.color = "red";
+	}
+	let span2 = document.getElementById("span2");
+	span2.onclick = () => {
+		span2.style.fontSize = "20px";
+	}
+	let image = document.getElementById("photo");
+	image.onclick = () => {
+		image.src = "photo2.jpg";
+	}
+	let text_image = document.getElementById("inner");
+	text_image.onclick = () => {
+		text_image.innerHTML = "<img src = 'photo2.jpg' height='240px' width='240px'>";
+	}
+	function bigImg(x) {
+		x.style.height = '150px';
+		x.style.width = '350px';
+	}
+	function littImg(x) {
+		x.style.height = '100px';
+		x.style.width = '240px';
+	}
+	let border1 = document.getElementById("border1");
+	border1.ondblclick = () => {
+		border1.style.border = "4px solid black";
+	}
+</script>
+
+</html>
