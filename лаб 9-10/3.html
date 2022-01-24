@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Перемещаемые текстовые облас-ти</title>
+</head>
+  <meta charset="UTF-8">
+<body >
+  <img src="photo1.jpg" id="myImg" style="position:absolute; top:30; left:30;width: 190px; height: 90px;"></img>
+</body>
+<script>
+  let idImg = document.getElementById("myImg");
+  setInterval("moveR()", 40);
+  function moveR() {
+    console.log(idImg.style.left);
+    if (parseInt(idImg.style.left) < 900 && parseInt(idImg.style.left) < 600) {
+      idImg.style.left = parseInt(idImg.style.left) + Math.floor(Math.random() * 10)+"px";
+      idImg.style.top = parseInt(idImg.style.top) + Math.floor(Math.random() * 10)+ "px";
+
+    }
+    else {
+      idImg.style.left = 30+"px";
+      idImg.style.top = 30+"px";
+    }
+  }
+</script>
+
+</html>
+<!-- Функция parseInt преобразует строку в целое число -->

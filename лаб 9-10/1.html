@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Перемещаемые картинк</title>
+</head>
+
+<body>
+	<img src="photo1.jpg" draggable="true" onmousedown="drag()" id="myImg"
+		style="position:absolute; top:30; left:30;width: 150px;height: 150px;">
+</body>
+<script>
+	let flag = false;
+	let idImg = document.getElementById("myImg");
+	function drag() {
+		flag = true;
+		//срабатывает в момент нажатия на кнопку мыши
+	}
+	document.body.onmousemove = (event) => {
+		if (flag) {
+			idImg.style.top = event.clientY;
+			idImg.style.left = event.clientX;
+			//Событие onmousemove используется для определения перемещения курсора мыши в любом направлении экрана.
+		}
+	}
+	document.body.onmouseup = () => {
+		flag = false;
+
+	}
+</script>
+</html>

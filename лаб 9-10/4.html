@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <img src='red.bmp' id='pix' style="position:relative;top:400px;left:-10px">
+  <form name='first'>
+    <input type="radio" name="line_type" value='x*x'>x^2
+    <input type="radio" name="line_type" value='x*x*x'>x^3
+    <input type="radio" name="line_type" value='Math.sin(x)'>SIN(X)
+    <input type="radio" name="line_type" value='Math.cos(x)'>COS(X)
+    <select>
+      <option value='red'>Красный</option>
+      <option value='green'>Зеленый</option>
+      <option value='blue'>Синий</option>
+      <option value='black'>Черный</option>
+    </select>
+  </form>
+  <button onclick="pre_write()">go</button>
+  <script>
+    var xst, yst, x, y;
+    var color;
+    function pre_write() {
+      let pix = document.getElementById("pix");
+      yst = parseInt(pix.style.top);
+      xst = parseInt(pix.style.left);
+      x = xst;
+      y = yst;
+      radio = document.getElementsByName('line_type');
+      color = document.getElementsByTagName('option');
+      for (i = 0; i < radio.length; i++)
+        if (radio[i].checked)
+          fnc_to_draw = radio[i].value;
+      setInterval("write(" + fnc_to_draw + ")", 10)
+      for (i = 0; i <script.color.length; i++)
+        if (color[i].selected) color = color[i].value;
+    }
+
+
+    function write(fnc_to_draw) {
+      x += 0.1;
+      y = yst + eval(fnc_to_draw) * 15;
+      document.write('<img src="' + color + '.bmp" style="position:relative;top:' + y + 'px;left:' + x + 'px">')
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>2 ЗАДАНИЕ</title>
+</head>
+<body>
+<img src="photo1.jpg" id="img" style="width: 270px;height: 170px;">
+</body>
+<script type="text/javascript">
+ //замыкание
+	function move_img(){
+	let counter = 0;
+	return ()=>{
+		counter += 10;
+		img.style.marginLeft = counter + "px";
+		if (counter === 1000) clearInterval(time)	
+	}}
+	let move = move_img();
+let time = setInterval("move()",50);
+</script>
+</html>
