@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>2 задание</title>
+<script type="text/javascript">
+    function Student(name,surname,physics,math,informatics){
+ this.name=name;
+ this.surname=surname;
+ this.physics=physics;
+ this.math=math;
+ this.informatics=informatics;
+ this.result= function res(kurs){
+         alert( name + " " + surname );
+       let a =new Number((math+informatics+physics)/3);
+        document.write("средний балл "+name+" "+surname+": "+ a.toFixed(1) );
+            }
+}
+ let gr1 = new Student("Андрей","Коренчук",7,8,9);
+ let gr2 = new Student("Глеб","Хиневич",9,5,9);
+ let gr3 = new Student("Павел","Арцыхович",7,8,6);
+Student.prototype.kurs=this.kurs; //добовляем новое свойство
+gr1.kurs=1;
+gr2.kurs=2;
+gr3.kurs=3;
+gr1.result();
+document.write(" группа "+gr1.kurs+"<br>");
+gr2.result();
+document.write(" группа "+gr2.kurs+"<br>");
+gr3.result();
+document.write(" группа "+gr3.kurs);
+</script>
+</head>
+<body>
+</body>
+</html>

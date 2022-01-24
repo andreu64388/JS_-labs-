@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>1 задание</title>
+	<script type="text/javascript">
+function Gruppa(n,spec,kolich) {
+this.n=n;
+this.spec=spec;//свойства
+this.kolich=kolich;	
+this.sub_stud=function sub_stud(k){
+this.kolich-=k;}  //метод
+this.add_stud=function add_stud(d) {
+this.kolich+=d; }
+}
+  let gr1=new Gruppa(1,'ИСиТ', 28);//создаем экземпляры объекта
+  let gr2=new Gruppa(2,'ИСиТ', 29);
+  let gr3=new Gruppa(3,'ИСиТ', 30);
+  let gr4=new Gruppa(4,'ИСиТ', 31);
+gr1.add_stud(2);//добавляем 2-х студентов
+gr2.add_stud(3);
+gr3.add_stud(4);
+gr4.add_stud(5);
+gr1.sub_stud(4);//отнимаем 2-х студентов
+gr2.sub_stud(1);
+gr3.sub_stud(2);
+gr4.sub_stud(4);
+document.write("Количество студентов в "+gr1.n+" группе: "+ gr1.kolich+"<br>");
+document.write("Количество студентов в "+gr2.n+" группе: "+ gr2.kolich+"<br>");
+document.write("Количество студентов в "+gr3.n+" группе: "+ gr3.kolich+"<br>");
+document.write("Количество студентов в "+gr4.n+" группе: "+ gr4.kolich+"<br>");
+</script>
+</body>
+</html>
