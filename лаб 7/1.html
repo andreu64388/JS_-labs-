@@ -1,0 +1,78 @@
+  <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>7 лаба</title>
+      <link  href="xc.scss">
+  <style type="text/css">
+    form {
+      width: 500px;
+      color: rgba(221, 156, 156, 0.377)
+      
+    }
+    
+  </style>
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>Форма</legend>
+      <p><textarea name="user_message" cols="13" rows="3" id="text">Факультет информационных технологий</textarea></p>
+      <p><input type="text" placeholder="Фамилия" name="surname" id="surname"></p>
+      <p><input type="text" placeholder="Имя" name="firs_name" id="name"></p>
+      <p><label for="spec">specialty</label>
+        <select id="spec">
+          <option>ИСИТ</option>
+          <option>ПОИТ</option>
+          <option>ПОИМБС</option>
+          <option>ДЭВИ</option>
+        </select>
+      </p>
+      <p><label for="kurs">Курс</label>
+        <input type="radio" name="radio" id="kurs1" value="1" checked="">1
+        <input type="radio" name="radio" id="kurs2" value="2">2
+        <input type="radio" name="radio" id="kurs3" value="3">3
+        <input type="radio" name="radio" id="kurs4" value="4">4
+      </p>
+      <label for="kurs">Предметы</label>
+      <p><input type="checkbox" name="space" id="checkbox1" value="ОИТ"> ОИТ
+      
+  <span class="form">
+    <div class="CLA">
+    </div> 
+  </span>
+</body>
+<div class="wrapper">
+  zz
+</div>
+<script>
+  "use srict"; 
+  document.querySelector(".write").onclick = () => {
+    let textarea = document.querySelector('#text');
+    let name = document.getElementById("name");
+    let surname = document.querySelector('#surname');
+    let spec = document.querySelector('#spec');
+let a = d
+    let kurs = document.getElementsByName('radio');
+    var str = "";
+    for (let i = 0; i < kurs.length; i++) {
+      if (kurs[i].checked) {
+        str = kurs[i].value;
+      }
+    }
+    let subject = document.getElementsByName('space');
+    var empty_1 = "";
+    var empty_2 = "";
+    for (let i = 0; i < subject.length; i++) {
+      if (subject[i].checked) {
+        empty_1 += "<li>" + subject[i].value + "</li>";
+        empty_2 += "<option>" + subject[i].value + "<option>";
+      }
+    }
+    doument.write(`${textarea.value}<br>${name.value} ${surname.value} специальность ${spec.value} курс ${str} должен сдавать следущие предметы : <ul> ${empty_1} </ul> <select> ${empty_2}</select>`);
+  }
+</script>
+
+</html>
